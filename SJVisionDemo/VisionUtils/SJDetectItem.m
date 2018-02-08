@@ -36,7 +36,8 @@
 
 
 
-@implementation JSDetectFaceItem
+
+@implementation SJDetectFaceItem
 
 - (NSMutableArray *)allPoints {
     if (!_allPoints) {

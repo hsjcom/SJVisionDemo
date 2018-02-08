@@ -13,7 +13,7 @@
 typedef NS_ENUM(NSUInteger, SJDetectType) {
     SJDetectTypeFace,           // 人脸识别
     SJDetectTypeLandmark,       // 特征识别
-    SJDetectTypeTextRectangles // 文字识别
+    SJDetectTypeTextRectangles  // 文字识别
 };
 
 typedef void(^detectImageHandler)(SJDetectItem * __nullable detectItem);
@@ -22,5 +22,8 @@ typedef void(^detectImageHandler)(SJDetectItem * __nullable detectItem);
 @interface SJVisionDetectUtils : NSObject
 
 + (void)detectImageWithType:(SJDetectType)type image:(UIImage *_Nullable)image complete:(detectImageHandler _Nullable)complete;
+
+//转换坐标与大小
++ (CGRect)convertRect:(CGRect)oldRect imageSize:(CGSize)imageSize;
 
 @end

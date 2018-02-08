@@ -26,10 +26,10 @@
 
 
 
-@interface JSDetectFaceItem : NSObject
+@interface SJDetectFaceItem : NSObject
 
 @property (nonatomic, strong, nullable) VNFaceObservation *observation;
-
+@property (nonatomic, strong, nullable) VNFaceLandmarks2D *landmarks;
 @property (nonatomic, strong, nonnull) NSMutableArray *allPoints;
 
 @end
