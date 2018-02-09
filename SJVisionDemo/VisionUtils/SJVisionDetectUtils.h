@@ -13,7 +13,7 @@
 typedef NS_ENUM(NSUInteger, SJDetectType) {
     SJDetectTypeFace,           // 人脸识别
     SJDetectTypeLandmark,       // 特征识别
-    SJDetectTypeTextRectangles  // 文字识别
+    SJDetectTypeTextRectangles, // 文字识别
 };
 
 typedef void(^detectImageHandler)(SJDetectItem * __nullable detectItem);

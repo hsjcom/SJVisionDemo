@@ -18,6 +18,7 @@
 		B25907EB1FD51E5C005220A7 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B25907EA1FD51E5C005220A7 /* UIView+Extension.m */; };
 		B25907EF1FD52683005220A7 /* SJDetectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B25907EE1FD52683005220A7 /* SJDetectItem.m */; };
 		B25907F21FD53A4F005220A7 /* SJVisionDetectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B25907F11FD53A4F005220A7 /* SJVisionDetectUtils.m */; };
+		B2922A7D202D3DE000B2D2DC /* CameraCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2922A7C202D3DE000B2D2DC /* CameraCaptureController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		B25907EE1FD52683005220A7 /* SJDetectItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJDetectItem.m; sourceTree = "<group>"; };
 		B25907F01FD53A4F005220A7 /* SJVisionDetectUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJVisionDetectUtils.h; sourceTree = "<group>"; };
 		B25907F11FD53A4F005220A7 /* SJVisionDetectUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJVisionDetectUtils.m; sourceTree = "<group>"; };
+		B2922A7B202D3DE000B2D2DC /* CameraCaptureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraCaptureController.h; path = SJVisionDemo/CameraCaptureController.h; sourceTree = SOURCE_ROOT; };
+		B2922A7C202D3DE000B2D2DC /* CameraCaptureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CameraCaptureController.m; path = SJVisionDemo/CameraCaptureController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				B25907B71FD51CA6005220A7 /* AppDelegate.m */,
 				B25907B91FD51CA6005220A7 /* ViewController.h */,
 				B25907BA1FD51CA6005220A7 /* ViewController.m */,
+				B2922A7B202D3DE000B2D2DC /* CameraCaptureController.h */,
+				B2922A7C202D3DE000B2D2DC /* CameraCaptureController.m */,
 				B25907BC1FD51CA6005220A7 /* Main.storyboard */,
 				B25907BF1FD51CA6005220A7 /* Assets.xcassets */,
 				B25907C11FD51CA6005220A7 /* LaunchScreen.storyboard */,
@@ -300,6 +305,7 @@
 				B25907C61FD51CA6005220A7 /* main.m in Sources */,
 				B25907EF1FD52683005220A7 /* SJDetectItem.m in Sources */,
 				B25907EB1FD51E5C005220A7 /* UIView+Extension.m in Sources */,
+				B2922A7D202D3DE000B2D2DC /* CameraCaptureController.m in Sources */,
 				B25907B81FD51CA6005220A7 /* AppDelegate.m in Sources */,
 				B25907F21FD53A4F005220A7 /* SJVisionDetectUtils.m in Sources */,
 			);
