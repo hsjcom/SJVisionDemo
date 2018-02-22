@@ -32,7 +32,7 @@ typedef void(^detectFaceRequestHandler)(VNRequest *request, NSError * _Nullable 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"实时检测";
     
     [self getAuthorization];
 }
@@ -58,7 +58,7 @@ typedef void(^detectFaceRequestHandler)(VNRequest *request, NSError * _Nullable 
     _captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:_captureSession];
     _captureVideoPreviewLayer.frame = self.view.bounds;
     _captureVideoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    _captureVideoPreviewLayer.connection.videoOrientation = 3;
+    _captureVideoPreviewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
     
     // 显示在视图表面的图层
     CALayer *layer = self.view.layer;
@@ -125,7 +125,7 @@ typedef void(^detectFaceRequestHandler)(VNRequest *request, NSError * _Nullable 
         }
         
         // 设置输出图片方向
-        captureConnection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;
+        captureConnection.videoOrientation = AVCaptureVideoOrientationPortrait;
     }
 }
 
