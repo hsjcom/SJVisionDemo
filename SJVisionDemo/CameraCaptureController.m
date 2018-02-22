@@ -133,6 +133,7 @@ typedef void(^detectFaceRequestHandler)(VNRequest *request, NSError * _Nullable 
     AVAuthorizationStatus videoStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
     switch (videoStatus) {
         case AVAuthorizationStatusAuthorized:
+            [self initCapture];
             break;
             
         case AVAuthorizationStatusNotDetermined:
@@ -157,6 +158,7 @@ typedef void(^detectFaceRequestHandler)(VNRequest *request, NSError * _Nullable 
 
 - (void)captureOutput:(AVCaptureFileOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     CVPixelBufferRef BufferRef = CMSampleBufferGetImageBuffer(sampleBuffer);
+    
     VNDetectFaceRectanglesRequest *detectFaceRequest = [[VNDetectFaceRectanglesRequest alloc ]init];
     VNImageRequestHandler *detectFaceRequestHandler = [[VNImageRequestHandler alloc]initWithCVPixelBuffer:BufferRef options:@{}];
     
