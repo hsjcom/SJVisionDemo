@@ -18,6 +18,9 @@
 		B25907EB1FD51E5C005220A7 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B25907EA1FD51E5C005220A7 /* UIView+Extension.m */; };
 		B25907EF1FD52683005220A7 /* SJDetectItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B25907EE1FD52683005220A7 /* SJDetectItem.m */; };
 		B25907F21FD53A4F005220A7 /* SJVisionDetectUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B25907F11FD53A4F005220A7 /* SJVisionDetectUtils.m */; };
+		B281C548203E9A57008BEE4E /* FaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B281C547203E9A57008BEE4E /* FaceViewController.m */; };
+		B281C54B203E9DC4008BEE4E /* SJVisionViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B281C54A203E9DC4008BEE4E /* SJVisionViewUtils.m */; };
+		B281C54E203EACE5008BEE4E /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = B281C54D203EACE4008BEE4E /* hat.png */; };
 		B2922A7D202D3DE000B2D2DC /* CameraCaptureController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2922A7C202D3DE000B2D2DC /* CameraCaptureController.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,11 @@
 		B25907EE1FD52683005220A7 /* SJDetectItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJDetectItem.m; sourceTree = "<group>"; };
 		B25907F01FD53A4F005220A7 /* SJVisionDetectUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJVisionDetectUtils.h; sourceTree = "<group>"; };
 		B25907F11FD53A4F005220A7 /* SJVisionDetectUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJVisionDetectUtils.m; sourceTree = "<group>"; };
+		B281C546203E9A57008BEE4E /* FaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceViewController.h; sourceTree = "<group>"; };
+		B281C547203E9A57008BEE4E /* FaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceViewController.m; sourceTree = "<group>"; };
+		B281C549203E9DC4008BEE4E /* SJVisionViewUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SJVisionViewUtils.h; sourceTree = "<group>"; };
+		B281C54A203E9DC4008BEE4E /* SJVisionViewUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SJVisionViewUtils.m; sourceTree = "<group>"; };
+		B281C54D203EACE4008BEE4E /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
 		B2922A7B202D3DE000B2D2DC /* CameraCaptureController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraCaptureController.h; path = SJVisionDemo/CameraCaptureController.h; sourceTree = SOURCE_ROOT; };
 		B2922A7C202D3DE000B2D2DC /* CameraCaptureController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CameraCaptureController.m; path = SJVisionDemo/CameraCaptureController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				B25907B51FD51CA6005220A7 /* SJVisionDemo */,
+				B281C54C203EACE4008BEE4E /* Resource */,
 				B25907CE1FD51CA6005220A7 /* SJVisionDemoTests */,
 				B25907D91FD51CA6005220A7 /* SJVisionDemoUITests */,
 				B25907B41FD51CA6005220A7 /* Products */,
@@ -121,6 +130,8 @@
 				B25907BA1FD51CA6005220A7 /* ViewController.m */,
 				B2922A7B202D3DE000B2D2DC /* CameraCaptureController.h */,
 				B2922A7C202D3DE000B2D2DC /* CameraCaptureController.m */,
+				B281C546203E9A57008BEE4E /* FaceViewController.h */,
+				B281C547203E9A57008BEE4E /* FaceViewController.m */,
 				B25907BC1FD51CA6005220A7 /* Main.storyboard */,
 				B25907BF1FD51CA6005220A7 /* Assets.xcassets */,
 				B25907C11FD51CA6005220A7 /* LaunchScreen.storyboard */,
@@ -164,8 +175,18 @@
 				B25907EE1FD52683005220A7 /* SJDetectItem.m */,
 				B25907F01FD53A4F005220A7 /* SJVisionDetectUtils.h */,
 				B25907F11FD53A4F005220A7 /* SJVisionDetectUtils.m */,
+				B281C549203E9DC4008BEE4E /* SJVisionViewUtils.h */,
+				B281C54A203E9DC4008BEE4E /* SJVisionViewUtils.m */,
 			);
 			path = VisionUtils;
+			sourceTree = "<group>";
+		};
+		B281C54C203EACE4008BEE4E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B281C54D203EACE4008BEE4E /* hat.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +298,7 @@
 				B25907C31FD51CA6005220A7 /* LaunchScreen.storyboard in Resources */,
 				B25907C01FD51CA6005220A7 /* Assets.xcassets in Resources */,
 				B25907BE1FD51CA6005220A7 /* Main.storyboard in Resources */,
+				B281C54E203EACE5008BEE4E /* hat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +326,10 @@
 				B25907BB1FD51CA6005220A7 /* ViewController.m in Sources */,
 				B25907C61FD51CA6005220A7 /* main.m in Sources */,
 				B25907EF1FD52683005220A7 /* SJDetectItem.m in Sources */,
+				B281C54B203E9DC4008BEE4E /* SJVisionViewUtils.m in Sources */,
 				B25907EB1FD51E5C005220A7 /* UIView+Extension.m in Sources */,
 				B2922A7D202D3DE000B2D2DC /* CameraCaptureController.m in Sources */,
+				B281C548203E9A57008BEE4E /* FaceViewController.m in Sources */,
 				B25907B81FD51CA6005220A7 /* AppDelegate.m in Sources */,
 				B25907F21FD53A4F005220A7 /* SJVisionDetectUtils.m in Sources */,
 			);

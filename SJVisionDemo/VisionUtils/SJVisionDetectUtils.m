@@ -126,7 +126,7 @@ typedef void(^CompletionHandler)(VNRequest * _Nullable request, NSError * _Nulla
     for (VNFaceObservation *observation in observations) {
         
         // 创建特征存储对象
-        SJDetectFaceItem *detectFaceData = [[SJDetectFaceItem alloc]init];
+        SJDetectFaceItem *detectFaceData = [[SJDetectFaceItem alloc] init];
         
         // 获取细节特征
         VNFaceLandmarks2D *landmarks = observation.landmarks;
