@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import "UIView+Extension.h"
+#import "CameraCaptureController.h"
+#import "FaceViewController.h"
+
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -22,8 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.dataArray = @[@"人脸识别", @"特征识别", @"文字识别", @"实时检测Face", @"实时动态添加"];
+    
+    self.dataArray = @[@"人脸识别", @"特征识别", @"文字识别", @"实时检测"];
     [self.tableView reloadData];
 }
 
@@ -52,35 +55,30 @@
     NSString *content = self.dataArray[indexPath.row];
     
     if ([content isEqualToString:@"人脸识别"]) {
-//        DSFaceViewController *vc = [[DSFaceViewController alloc]initWithDetectionType:DSDetectionTypeFace];
-//        [self.navigationController pushViewController:vc animated:YES];
+        FaceViewController *vc = [[FaceViewController alloc] initWithDetectionType:SJDetectTypeFace];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
     else if ([content isEqualToString:@"特征识别"]) {
-//        DSFaceViewController *vc = [[DSFaceViewController alloc]initWithDetectionType:DSDetectionTypeLandmark];
-//        [self.navigationController pushViewController:vc animated:YES];
-  
+        FaceViewController *vc = [[FaceViewController alloc] initWithDetectionType:SJDetectTypeLandmark];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
     else if ([content isEqualToString:@"文字识别"]) {
-//        DSFaceViewController *vc = [[DSFaceViewController alloc]initWithDetectionType:DSDetectionTypeTextRectangles];
-//        [self.navigationController pushViewController:vc animated:YES];
+        FaceViewController *vc = [[FaceViewController alloc] initWithDetectionType:SJDetectTypeTextRectangles];
+        [self.navigationController pushViewController:vc animated:YES];
     }
     
-    else if ([content isEqualToString:@"实时检测Face"]) {
-//        CameraCaptureController *vc = [[CameraCaptureController alloc]initWithDetectionType:DSDetectionTypeFaceRectangles];
-//        [self.navigationController pushViewController:vc animated:YES];
-    }
-    
-    else if ([content isEqualToString:@"实时动态添加"]) {
-//        CameraCaptureController *vc = [[CameraCaptureController alloc]initWithDetectionType:DSDetectionTypeFaceHat];
-//        [self.navigationController pushViewController:vc animated:YES];
+    else if ([content isEqualToString:@"实时检测"]) {
+        CameraCaptureController *vc = [[CameraCaptureController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 
 - (UITableView *)tableView {
     if (nil == _tableView){
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, self.view.height - 64) style:UITableViewStylePlain];
+        CGFloat statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, statusBarHeight + 44, self.view.width, self.view.height - statusBarHeight - 44) style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
